@@ -1,0 +1,1116 @@
+[    0.000000] Linux version 5.5.10-200.fc31.x86_64 (mockbuild@bkernel03.phx2.fedoraproject.org) (gcc version 9.2.1 20190827 (Red Hat 9.2.1-1) (GCC)) #1 SMP Wed Mar 18 14:21:38 UTC 2020
+[    0.000000] Command line: BOOT_IMAGE=(hd0,msdos1)/vmlinuz-5.5.10-200.fc31.x86_64 root=/dev/mapper/fedora_localhost--live-root ro resume=/dev/mapper/fedora_localhost--live-swap rd.lvm.lv=fedora_localhost-live/root rd.lvm.lv=fedora_localhost-live/swap rhgb quiet
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x00000001995fffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 14d401001, primary cpu clock
+[    0.000000] kvm-clock: using sched offset of 5760083041 cycles
+[    0.000003] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000005] tsc: Detected 2400.002 MHz processor
+[    0.002593] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.002595] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.002601] last_pfn = 0x199600 max_arch_pfn = 0x400000000
+[    0.002613] MTRR default type: uncachable
+[    0.002614] MTRR variable ranges disabled:
+[    0.002615] Disabled
+[    0.002616] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+[    0.002619] CPU MTRRs all blank - virtualized system.
+[    0.002622] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[    0.002627] last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
+[    0.002675] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+[    0.135492] BRK [0x14d601000, 0x14d601fff] PGTABLE
+[    0.135495] BRK [0x14d602000, 0x14d602fff] PGTABLE
+[    0.135496] BRK [0x14d603000, 0x14d603fff] PGTABLE
+[    0.135544] BRK [0x14d604000, 0x14d604fff] PGTABLE
+[    0.135546] BRK [0x14d605000, 0x14d605fff] PGTABLE
+[    0.135639] BRK [0x14d606000, 0x14d606fff] PGTABLE
+[    0.135749] BRK [0x14d607000, 0x14d607fff] PGTABLE
+[    0.135786] BRK [0x14d608000, 0x14d608fff] PGTABLE
+[    0.135822] BRK [0x14d609000, 0x14d609fff] PGTABLE
+[    0.135873] BRK [0x14d60a000, 0x14d60afff] PGTABLE
+[    0.137435] RAMDISK: [mem 0x344c5000-0x3625afff]
+[    0.137453] ACPI: Early table checksum verification disabled
+[    0.137456] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[    0.137461] ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[    0.137466] ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.137472] ACPI: DSDT 0x00000000DFFF0470 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+[    0.137475] ACPI: FACS 0x00000000DFFF0200 000040
+[    0.137478] ACPI: FACS 0x00000000DFFF0200 000040
+[    0.137481] ACPI: APIC 0x00000000DFFF0240 00005C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.137484] ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+[    0.137492] ACPI: Local APIC address 0xfee00000
+[    0.137797] No NUMA configuration found
+[    0.137798] Faking a node at [mem 0x0000000000000000-0x00000001995fffff]
+[    0.137809] NODE_DATA(0) allocated [mem 0x1995d4000-0x1995fefff]
+[    0.231335] Zone ranges:
+[    0.231337]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.231339]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.231341]   Normal   [mem 0x0000000100000000-0x00000001995fffff]
+[    0.231342]   Device   empty
+[    0.231343] Movable zone start for each node
+[    0.231347] Early memory node ranges
+[    0.231348]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.231349]   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
+[    0.231351]   node   0: [mem 0x0000000100000000-0x00000001995fffff]
+[    0.231639] Zeroed struct page in unavailable ranges: 27250 pages
+[    0.231640] Initmem setup node 0 [mem 0x0000000000001000-0x00000001995fffff]
+[    0.231642] On node 0 totalpages: 1545614
+[    0.231643]   DMA zone: 64 pages used for memmap
+[    0.231644]   DMA zone: 21 pages reserved
+[    0.231646]   DMA zone: 3998 pages, LIFO batch:0
+[    0.231793]   DMA32 zone: 14272 pages used for memmap
+[    0.231795]   DMA32 zone: 913392 pages, LIFO batch:63
+[    0.250646]   Normal zone: 9816 pages used for memmap
+[    0.250648]   Normal zone: 628224 pages, LIFO batch:63
+[    0.262933] ACPI: PM-Timer IO Port: 0x4008
+[    0.262936] ACPI: Local APIC address 0xfee00000
+[    0.263071] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
+[    0.263074] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.263076] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.263078] ACPI: IRQ0 used by override.
+[    0.263080] ACPI: IRQ9 used by override.
+[    0.263083] Using ACPI (MADT) for SMP configuration information
+[    0.263092] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+[    0.263122] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.263125] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.263126] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.263127] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.263129] PM: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
+[    0.263130] PM: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
+[    0.263131] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.263132] PM: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+[    0.263133] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.263134] PM: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
+[    0.263135] PM: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[    0.263138] [mem 0xe0000000-0xfebfffff] available for PCI devices
+[    0.263139] Booting paravirtualized kernel on KVM
+[    0.263142] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.611206] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:2 nr_cpu_ids:2 nr_node_ids:1
+[    0.614181] percpu: Embedded 55 pages/cpu s188416 r8192 d28672 u1048576
+[    0.614192] pcpu-alloc: s188416 r8192 d28672 u1048576 alloc=1*2097152
+[    0.614194] pcpu-alloc: [0] 0 1 
+[    0.614240] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.614246] Built 1 zonelists, mobility grouping on.  Total pages: 1521441
+[    0.614248] Policy zone: Normal
+[    0.614250] Kernel command line: BOOT_IMAGE=(hd0,msdos1)/vmlinuz-5.5.10-200.fc31.x86_64 root=/dev/mapper/fedora_localhost--live-root ro resume=/dev/mapper/fedora_localhost--live-swap rd.lvm.lv=fedora_localhost-live/root rd.lvm.lv=fedora_localhost-live/swap rhgb quiet
+[    0.625721] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.631274] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.631339] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.686463] Memory: 5935924K/6182456K available (14339K kernel code, 2297K rwdata, 4976K rodata, 2556K init, 4156K bss, 246532K reserved, 0K cma-reserved)
+[    0.688588] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.688608] Kernel/User page tables isolation: enabled
+[    0.688628] ftrace: allocating 41467 entries in 162 pages
+[    0.714803] ftrace: allocated 162 pages with 3 groups
+[    0.716892] rcu: Hierarchical RCU implementation.
+[    0.716894] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=2.
+[    0.716895] 	Tasks RCU enabled.
+[    0.716897] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.716897] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[    0.721158] NR_IRQS: 524544, nr_irqs: 440, preallocated irqs: 16
+[    0.721496] random: crng done (trusting CPU's manufacturer)
+[    0.740524] Console: colour VGA+ 80x25
+[    0.740529] printk: console [tty0] enabled
+[    0.740560] ACPI: Core revision 20191018
+[    0.740705] APIC: Switch to symmetric I/O mode setup
+[    0.741106] x2apic enabled
+[    0.741508] Switched APIC routing to physical x2apic.
+[    0.743286] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.743323] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x22983938a92, max_idle_ns: 440795216168 ns
+[    0.743328] Calibrating delay loop (skipped) preset value.. 4800.00 BogoMIPS (lpj=2400002)
+[    0.743330] pid_max: default: 32768 minimum: 301
+[    0.743369] LSM: Security Framework initializing
+[    0.743380] Yama: becoming mindful.
+[    0.743388] SELinux:  Initializing.
+[    0.743408] *** VALIDATE SELinux ***
+[    0.743434] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.743445] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.743463] *** VALIDATE tmpfs ***
+[    0.743619] *** VALIDATE proc ***
+[    0.743669] *** VALIDATE cgroup1 ***
+[    0.743671] *** VALIDATE cgroup2 ***
+[    0.745473] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[    0.745474] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    0.745477] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.745479] Spectre V2 : Mitigation: Full generic retpoline
+[    0.745479] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.745480] Speculative Store Bypass: Vulnerable
+[    0.745484] MDS: Mitigation: Clear CPU buffers
+[    0.745809] Freeing SMP alternatives memory: 36K
+[    0.852620] APIC calibration not consistent with PM-Timer: 101ms instead of 100ms
+[    0.852621] APIC delta adjusted to PM-Timer: 6271508 (6334424)
+[    0.852704] smpboot: CPU0: Intel(R) Core(TM) i5-6198DU CPU @ 2.30GHz (family: 0x6, model: 0x4e, stepping: 0x3)
+[    0.852835] Performance Events: unsupported p6 CPU model 78 no PMU driver, software events only.
+[    0.852865] rcu: Hierarchical SRCU implementation.
+[    0.853325] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.853325] smp: Bringing up secondary CPUs ...
+[    0.853325] x86: Booting SMP configuration:
+[    0.853325] .... node  #0, CPUs:      #1
+[    0.022872] kvm-clock: cpu 1, msr 14d401041, secondary cpu clock
+[    0.854445] smp: Brought up 1 node, 2 CPUs
+[    0.854446] smpboot: Max logical packages: 1
+[    0.854447] smpboot: Total of 2 processors activated (9600.00 BogoMIPS)
+[    0.855357] devtmpfs: initialized
+[    0.855372] x86/mm: Memory block size: 128MB
+[    0.856414] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.856414] futex hash table entries: 512 (order: 3, 32768 bytes, linear)
+[    0.856414] pinctrl core: initialized pinctrl subsystem
+[    0.856586] PM: RTC time: 20:38:32, date: 2020-03-30
+[    0.856588] thermal_sys: Registered thermal governor 'fair_share'
+[    0.856589] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.856590] thermal_sys: Registered thermal governor 'step_wise'
+[    0.856591] thermal_sys: Registered thermal governor 'user_space'
+[    0.856792] NET: Registered protocol family 16
+[    0.856921] audit: initializing netlink subsys (disabled)
+[    0.856951] audit: type=2000 audit(1585600721.971:1): state=initialized audit_enabled=0 res=1
+[    0.856951] cpuidle: using governor menu
+[    0.856951] ACPI: bus type PCI registered
+[    0.856951] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.857357] PCI: Using configuration type 1 for base access
+[    0.860349] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    1.013617] cryptd: max_cpu_qlen set to 1000
+[    1.016401] alg: No test for 842 (842-generic)
+[    1.016401] alg: No test for 842 (842-scomp)
+[    1.023594] ACPI: Added _OSI(Module Device)
+[    1.023594] ACPI: Added _OSI(Processor Device)
+[    1.023594] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    1.023594] ACPI: Added _OSI(Processor Aggregator Device)
+[    1.023594] ACPI: Added _OSI(Linux-Dell-Video)
+[    1.023594] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    1.023594] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    1.025540] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    1.028061] ACPI: Interpreter enabled
+[    1.028085] ACPI: (supports S0 S5)
+[    1.028086] ACPI: Using IOAPIC for interrupt routing
+[    1.028280] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    1.028325] ACPI: Enabled 2 GPEs in block 00 to 07
+[    1.033839] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    1.033843] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+[    1.034233] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    1.034239] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    1.035348] PCI host bridge to bus 0000:00
+[    1.035350] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    1.035352] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    1.035353] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    1.035354] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+[    1.035356] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    1.035411] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    1.036325] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    1.037366] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+[    1.037930] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+[    1.038160] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    1.038161] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    1.038162] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    1.038163] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    1.038456] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+[    1.041348] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+[    1.045335] pci 0000:00:02.0: reg 0x14: [mem 0xf0000000-0xf7ffffff pref]
+[    1.050334] pci 0000:00:02.0: reg 0x18: [mem 0xf8000000-0xf81fffff]
+[    1.068587] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+[    1.070414] pci 0000:00:03.0: reg 0x10: [mem 0xf8200000-0xf821ffff]
+[    1.076335] pci 0000:00:03.0: reg 0x18: [io  0xd020-0xd027]
+[    1.092829] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+[    1.094456] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+[    1.097356] pci 0000:00:04.0: reg 0x14: [mem 0xf8400000-0xf87fffff]
+[    1.100335] pci 0000:00:04.0: reg 0x18: [mem 0xf8800000-0xf8803fff pref]
+[    1.115506] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+[    1.115690] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+[    1.115781] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+[    1.116812] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+[    1.119335] pci 0000:00:06.0: reg 0x10: [mem 0xf8804000-0xf8804fff]
+[    1.139510] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+[    1.140325] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    1.140328] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    1.140823] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+[    1.142400] pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+[    1.145353] pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
+[    1.148333] pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+[    1.151333] pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
+[    1.154333] pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+[    1.157333] pci 0000:00:0d.0: reg 0x24: [mem 0xf8806000-0xf8807fff]
+[    1.165325] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    1.165545] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    1.165651] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    1.165791] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    1.166058] iommu: Default domain type: Translated 
+[    1.166390] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    1.166392] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    1.166394] pci 0000:00:02.0: vgaarb: bridge control possible
+[    1.166395] vgaarb: loaded
+[    1.166514] SCSI subsystem initialized
+[    1.166526] libata version 3.00 loaded.
+[    1.166526] ACPI: bus type USB registered
+[    1.166526] usbcore: registered new interface driver usbfs
+[    1.166526] usbcore: registered new interface driver hub
+[    1.166526] usbcore: registered new device driver usb
+[    1.166526] pps_core: LinuxPPS API ver. 1 registered
+[    1.166526] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.166526] PTP clock support registered
+[    1.166526] EDAC MC: Ver: 3.0.0
+[    1.167420] PCI: Using ACPI for IRQ routing
+[    1.167421] PCI: pci_cache_line_size set to 64 bytes
+[    1.167737] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    1.167738] e820: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
+[    1.167768] e820: reserve RAM buffer [mem 0x199600000-0x19bffffff]
+[    1.167941] NetLabel: Initializing
+[    1.167942] NetLabel:  domain hash size = 128
+[    1.167942] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    1.167965] NetLabel:  unlabeled traffic allowed by default
+[    1.167977] clocksource: Switched to clocksource kvm-clock
+[    1.192331] *** VALIDATE bpf ***
+[    1.192733] VFS: Disk quotas dquot_6.6.0
+[    1.192747] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.192768] *** VALIDATE ramfs ***
+[    1.192771] *** VALIDATE hugetlbfs ***
+[    1.192798] pnp: PnP ACPI init
+[    1.192874] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+[    1.192945] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+[    1.193855] pnp: PnP ACPI: found 2 devices
+[    1.208951] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.209043] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    1.209045] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    1.209046] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    1.209048] pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
+[    1.209105] NET: Registered protocol family 2
+[    1.209270] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    1.209281] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    1.209338] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+[    1.209435] TCP: Hash tables configured (established 65536 bind 65536)
+[    1.209461] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    1.211527] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    1.211592] NET: Registered protocol family 1
+[    1.211597] NET: Registered protocol family 44
+[    1.211644] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    1.211665] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    1.211753] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    1.213461] PCI: CLS 0 bytes, default 64
+[    1.213517] Trying to unpack rootfs image as initramfs...
+[    1.778883] Freeing initrd memory: 30296K
+[    1.778886] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    1.778887] software IO TLB: mapped [mem 0xdbff0000-0xdfff0000] (64MB)
+[    1.778956] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x22983938a92, max_idle_ns: 440795216168 ns
+[    1.779050] clocksource: Switched to clocksource tsc
+[    1.779077] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    1.780092] Initialise system trusted keyrings
+[    1.780101] Key type blacklist registered
+[    1.780270] workingset: timestamp_bits=36 max_order=21 bucket_order=0
+[    1.782191] zbud: loaded
+[    1.783216] Platform Keyring initialized
+[    1.789263] NET: Registered protocol family 38
+[    1.789267] Key type asymmetric registered
+[    1.789268] Asymmetric key parser 'x509' registered
+[    1.789330] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    1.789459] io scheduler mq-deadline registered
+[    1.789460] io scheduler kyber registered
+[    1.789572] io scheduler bfq registered
+[    1.789774] atomic64_test: passed for x86-64 platform with CX8 and with SSE
+[    1.789898] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    1.789919] intel_idle: Please enable MWAIT in BIOS SETUP
+[    1.790088] ACPI: AC Adapter [AC] (on-line)
+[    1.790150] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    1.790188] ACPI: Power Button [PWRF]
+[    1.790283] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    1.790304] ACPI: Sleep Button [SLPF]
+[    1.791833] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    1.792388] battery: ACPI: Battery Slot [BAT0] (battery present)
+[    1.797246] Non-volatile memory driver v1.3
+[    1.797277] Linux agpgart interface v0.103
+[    1.797813] ahci 0000:00:0d.0: version 3.0
+[    1.798578] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+[    1.798779] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 2 ports 3 Gbps 0x3 impl SATA mode
+[    1.798781] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+[    1.799409] scsi host0: ahci
+[    1.799778] scsi host1: ahci
+[    1.799859] ata1: SATA max UDMA/133 abar m8192@0xf8806000 port 0xf8806100 irq 21
+[    1.799866] ata2: SATA max UDMA/133 abar m8192@0xf8806000 port 0xf8806180 irq 21
+[    1.799899] ata_piix 0000:00:01.1: version 2.13
+[    1.800896] scsi host2: ata_piix
+[    1.801191] scsi host3: ata_piix
+[    1.801366] ata3: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    1.801368] ata4: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    1.801465] libphy: Fixed MDIO Bus: probed
+[    1.801579] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.801581] ehci-pci: EHCI PCI platform driver
+[    1.801598] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.801601] ohci-pci: OHCI PCI platform driver
+[    1.802567] ohci-pci 0000:00:06.0: OHCI PCI host controller
+[    1.802676] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+[    1.802788] ohci-pci 0000:00:06.0: irq 22, io mem 0xf8804000
+[    1.889131] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.05
+[    1.889135] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.889137] usb usb1: Product: OHCI PCI host controller
+[    1.889139] usb usb1: Manufacturer: Linux 5.5.10-200.fc31.x86_64 ohci_hcd
+[    1.889141] usb usb1: SerialNumber: 0000:00:06.0
+[    1.889368] hub 1-0:1.0: USB hub found
+[    1.889401] hub 1-0:1.0: 12 ports detected
+[    1.890323] uhci_hcd: USB Universal Host Controller Interface driver
+[    1.890402] usbcore: registered new interface driver usbserial_generic
+[    1.890409] usbserial: USB Serial support registered for generic
+[    1.890449] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    1.891381] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.891392] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    1.891554] mousedev: PS/2 mouse device common for all mice
+[    1.893002] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    1.894453] rtc_cmos rtc_cmos: registered as rtc0
+[    1.894453] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    1.895202] device-mapper: uevent: version 1.0.3
+[    1.895386] device-mapper: ioctl: 4.41.0-ioctl (2019-09-16) initialised: dm-devel@redhat.com
+[    1.895559] intel_pstate: CPU model not supported
+[    1.895679] hid: raw HID events driver (C) Jiri Kosina
+[    1.895735] usbcore: registered new interface driver usbhid
+[    1.895736] usbhid: USB HID core driver
+[    1.895907] intel_pmc_core intel_pmc_core.0:  initialized
+[    1.895947] drop_monitor: Initializing network drop monitor service
+[    1.896091] Initializing XFRM netlink socket
+[    1.896299] NET: Registered protocol family 10
+[    1.907373] Segment Routing with IPv6
+[    1.907406] mip6: Mobile IPv6
+[    1.907408] NET: Registered protocol family 17
+[    1.908005] RAS: Correctable Errors collector initialized.
+[    1.908011] IPI shorthand broadcast: enabled
+[    1.908020] AVX2 version of gcm_enc/dec engaged.
+[    1.908021] AES CTR mode by8 optimization enabled
+[    1.972586] ata3.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+[    1.994015] sched_clock: Marking stable (1972129908, 21872983)->(2001778177, -7775286)
+[    1.994188] registered taskstats version 1
+[    1.994196] Loading compiled-in X.509 certificates
+[    2.031295] Loaded X.509 cert 'Fedora kernel signing key: 21cd382038df0ab2ebe470e71a6d905e6ad06a5f'
+[    2.031319] zswap: loaded using pool lzo/zbud
+[    2.031629] Key type ._fscrypt registered
+[    2.031629] Key type .fscrypt registered
+[    2.044024] Key type big_key registered
+[    2.049760] Key type encrypted registered
+[    2.049767] ima: No TPM chip found, activating TPM-bypass!
+[    2.049777] ima: Allocated hash algorithm: sha256
+[    2.049782] ima: No architecture policies found
+[    2.050016] PM:   Magic number: 12:938:650
+[    2.050163] rtc_cmos rtc_cmos: setting system clock to 2020-03-30T20:38:33 UTC (1585600713)
+[    2.212916] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    2.213246] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[    2.213250] ata1.00: 62779232 sectors, multi 128: LBA48 NCQ (depth 32)
+[    2.213868] ata1.00: configured for UDMA/133
+[    2.214729] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[    2.215018] scsi 0:0:0:0: Attached scsi generic sg0 type 0
+[    2.215224] sd 0:0:0:0: [sda] 62779232 512-byte logical blocks: (32.1 GB/29.9 GiB)
+[    2.215239] sd 0:0:0:0: [sda] Write Protect is off
+[    2.215242] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    2.215267] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    2.217004] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+[    2.217719]  sda: sda1 sda2
+[    2.218212] sd 0:0:0:0: [sda] Attached SCSI disk
+[    2.525217] ata2: SATA link down (SStatus 0 SControl 300)
+[    2.525598] scsi 2:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+[    2.526317] sr 2:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+[    2.526319] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    2.526516] sr 2:0:0:0: Attached scsi CD-ROM sr0
+[    2.526705] sr 2:0:0:0: Attached scsi generic sg1 type 5
+[    2.528973] Freeing unused decrypted memory: 2040K
+[    2.529568] Freeing unused kernel image (initmem) memory: 2556K
+[    2.529672] Write protecting the kernel read-only data: 22528k
+[    2.530403] Freeing unused kernel image (text/rodata gap) memory: 2044K
+[    2.530853] Freeing unused kernel image (rodata/data gap) memory: 1168K
+[    2.554002] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    2.554007] rodata_test: all tests were successful
+[    2.554009] x86/mm: Checking user space page tables
+[    2.573605] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    2.573608] Run /init as init process
+[    2.582455] systemd[1]: systemd v243.7-1.fc31 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    2.582495] systemd[1]: Detected virtualization oracle.
+[    2.582499] systemd[1]: Detected architecture x86-64.
+[    2.582501] systemd[1]: Running in initial RAM disk.
+[    2.582522] systemd[1]: Set hostname to <localhost.localdomain>.
+[    2.586954] usb 1-1: new full-speed USB device number 2 using ohci-pci
+[    2.704360] systemd[1]: Created slice system-systemd\x2dhibernate\x2dresume.slice.
+[    2.704511] systemd[1]: Reached target Slices.
+[    2.704540] systemd[1]: Reached target Swap.
+[    2.704561] systemd[1]: Reached target Timers.
+[    2.704935] systemd[1]: Listening on Journal Audit Socket.
+[    2.784547] fuse: init (API version 7.31)
+[    2.784576] *** VALIDATE fuse ***
+[    2.784579] *** VALIDATE fuse ***
+[    2.838437] usb 1-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+[    2.838439] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+[    2.838440] usb 1-1: Product: USB Tablet
+[    2.838442] usb 1-1: Manufacturer: VirtualBox
+[    2.860099] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input5
+[    2.860349] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+[    3.906835] audit: type=1130 audit(1585600715.356:2): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    4.603082] audit: type=1130 audit(1585600716.052:3): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    4.718936] audit: type=1130 audit(1585600716.168:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    4.737673] audit: type=1130 audit(1585600716.187:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    4.833276] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    4.833365] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input6
+[    4.931606] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    4.931607] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    5.355614] [drm] DMA map mode: Caching DMA mappings.
+[    5.355689] [drm] Capabilities:
+[    5.355690] [drm]   Cursor.
+[    5.355690] [drm]   Cursor bypass 2.
+[    5.355691] [drm]   Alpha cursor.
+[    5.355691] [drm]   3D.
+[    5.355692] [drm]   Extended Fifo.
+[    5.355692] [drm]   Pitchlock.
+[    5.355693] [drm]   Irq mask.
+[    5.355693] [drm]   GMR.
+[    5.355693] [drm]   Traces.
+[    5.355694] [drm]   GMR2.
+[    5.355694] [drm]   Screen Object 2.
+[    5.355695] [drm] Max GMR ids is 8192
+[    5.355696] [drm] Max number of GMR pages is 1048576
+[    5.355697] [drm] Max dedicated hypervisor surface memory is 393216 kiB
+[    5.355697] [drm] Maximum display memory size is 131072 kiB
+[    5.355698] [drm] VRAM at 0xf0000000 size is 131072 kiB
+[    5.355699] [drm] MMIO at 0xf8000000 size is 2048 kiB
+[    5.370598] [TTM] Zone  kernel: Available graphics memory: 2987032 KiB
+[    5.370599] [TTM] Zone   dma32: Available graphics memory: 2097152 KiB
+[    5.370600] [TTM] Initializing pool allocator
+[    5.370603] [TTM] Initializing DMA pool allocator
+[    5.370630] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    5.370630] [drm] No driver support for vblank timestamp query.
+[    5.370889] [drm] Screen Objects Display Unit initialized
+[    5.370958] [drm] width 720
+[    5.370972] [drm] height 400
+[    5.370985] [drm] bpp 32
+[    5.371259] [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+[    5.373689] [drm] DX: no.
+[    5.373690] [drm] Atomic: yes.
+[    5.373691] [drm] SM4_1: no.
+[    5.373762] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    5.379380] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    5.801496] fbcon: svgadrmfb (fb0) is primary device
+[    5.808643] Console: switching to colour frame buffer device 100x37
+[    5.810162] [drm] Initialized vmwgfx 2.16.0 20190328 for 0000:00:02.0 on minor 0
+[    6.248413] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:55:94:b4
+[    6.248420] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+[    6.268698] e1000 0000:00:03.0 enp0s3: renamed from eth0
+[    6.770703] PM: Image not found (code -22)
+[    6.772213] audit: type=1130 audit(1585600718.221:6): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-hibernate-resume@dev-mapper-fedora_localhost\x2d\x2dlive\x2dswap comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    6.772244] audit: type=1131 audit(1585600718.221:7): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-hibernate-resume@dev-mapper-fedora_localhost\x2d\x2dlive\x2dswap comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    6.787844] audit: type=1130 audit(1585600718.237:8): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    6.792532] audit: type=1130 audit(1585600718.241:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-initqueue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    6.874000] audit: type=1130 audit(1585600718.323:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-fsck-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    6.898882] EXT4-fs (dm-0): mounted filesystem with ordered data mode. Opts: (null)
+[    7.278647] audit: type=1130 audit(1585600718.728:11): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=initrd-parse-etc comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    7.278669] audit: type=1131 audit(1585600718.728:12): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=initrd-parse-etc comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    7.357797] audit: type=1130 audit(1585600718.807:13): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-pivot comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    7.376850] audit: type=1131 audit(1585600718.826:14): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-pivot comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    7.382550] audit: type=1131 audit(1585600718.832:15): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-initqueue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    7.709434] systemd-journald[281]: Received SIGTERM from PID 1 (systemd).
+[    7.879878] printk: systemd: 25 output lines suppressed due to ratelimiting
+[   10.114835] SELinux:  Permission watch in class filesystem not defined in policy.
+[   10.114841] SELinux:  Permission watch in class file not defined in policy.
+[   10.114842] SELinux:  Permission watch_mount in class file not defined in policy.
+[   10.114842] SELinux:  Permission watch_sb in class file not defined in policy.
+[   10.114843] SELinux:  Permission watch_with_perm in class file not defined in policy.
+[   10.114844] SELinux:  Permission watch_reads in class file not defined in policy.
+[   10.114849] SELinux:  Permission watch in class dir not defined in policy.
+[   10.114849] SELinux:  Permission watch_mount in class dir not defined in policy.
+[   10.114850] SELinux:  Permission watch_sb in class dir not defined in policy.
+[   10.114851] SELinux:  Permission watch_with_perm in class dir not defined in policy.
+[   10.114852] SELinux:  Permission watch_reads in class dir not defined in policy.
+[   10.114857] SELinux:  Permission watch in class lnk_file not defined in policy.
+[   10.114857] SELinux:  Permission watch_mount in class lnk_file not defined in policy.
+[   10.114858] SELinux:  Permission watch_sb in class lnk_file not defined in policy.
+[   10.114859] SELinux:  Permission watch_with_perm in class lnk_file not defined in policy.
+[   10.114859] SELinux:  Permission watch_reads in class lnk_file not defined in policy.
+[   10.114863] SELinux:  Permission watch in class chr_file not defined in policy.
+[   10.114864] SELinux:  Permission watch_mount in class chr_file not defined in policy.
+[   10.114864] SELinux:  Permission watch_sb in class chr_file not defined in policy.
+[   10.114865] SELinux:  Permission watch_with_perm in class chr_file not defined in policy.
+[   10.114866] SELinux:  Permission watch_reads in class chr_file not defined in policy.
+[   10.114869] SELinux:  Permission watch in class blk_file not defined in policy.
+[   10.114869] SELinux:  Permission watch_mount in class blk_file not defined in policy.
+[   10.114870] SELinux:  Permission watch_sb in class blk_file not defined in policy.
+[   10.114871] SELinux:  Permission watch_with_perm in class blk_file not defined in policy.
+[   10.114871] SELinux:  Permission watch_reads in class blk_file not defined in policy.
+[   10.114875] SELinux:  Permission watch in class sock_file not defined in policy.
+[   10.114876] SELinux:  Permission watch_mount in class sock_file not defined in policy.
+[   10.114877] SELinux:  Permission watch_sb in class sock_file not defined in policy.
+[   10.114878] SELinux:  Permission watch_with_perm in class sock_file not defined in policy.
+[   10.114878] SELinux:  Permission watch_reads in class sock_file not defined in policy.
+[   10.114882] SELinux:  Permission watch in class fifo_file not defined in policy.
+[   10.114882] SELinux:  Permission watch_mount in class fifo_file not defined in policy.
+[   10.114883] SELinux:  Permission watch_sb in class fifo_file not defined in policy.
+[   10.114884] SELinux:  Permission watch_with_perm in class fifo_file not defined in policy.
+[   10.114884] SELinux:  Permission watch_reads in class fifo_file not defined in policy.
+[   10.115121] SELinux:  Class perf_event not defined in policy.
+[   10.115122] SELinux: the above unknown classes and permissions will be allowed
+[   10.115127] SELinux:  policy capability network_peer_controls=1
+[   10.115128] SELinux:  policy capability open_perms=1
+[   10.115128] SELinux:  policy capability extended_socket_class=1
+[   10.115129] SELinux:  policy capability always_check_network=0
+[   10.115130] SELinux:  policy capability cgroup_seclabel=1
+[   10.115130] SELinux:  policy capability nnp_nosuid_transition=1
+[   10.162916] systemd[1]: Successfully loaded SELinux policy in 1.019840s.
+[   10.766726] systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 50.902ms.
+[   10.844982] systemd[1]: systemd v243.7-1.fc31 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[   10.845063] systemd[1]: Detected virtualization oracle.
+[   10.845072] systemd[1]: Detected architecture x86-64.
+[   10.851081] systemd[1]: Set hostname to <localhost.localdomain>.
+[   14.095750] systemd[1]: /usr/lib/systemd/system/sssd.service:12: PIDFile= references a path below legacy directory /var/run/, updating /var/run/sssd.pid → /run/sssd.pid; please update the unit file accordingly.
+[   14.100666] systemd[1]: /usr/lib/systemd/system/iscsid.service:11: PIDFile= references a path below legacy directory /var/run/, updating /var/run/iscsid.pid → /run/iscsid.pid; please update the unit file accordingly.
+[   14.101452] systemd[1]: /usr/lib/systemd/system/iscsiuio.service:13: PIDFile= references a path below legacy directory /var/run/, updating /var/run/iscsiuio.pid → /run/iscsiuio.pid; please update the unit file accordingly.
+[   14.106759] systemd[1]: /usr/lib/systemd/system/libvirtd-admin.socket:8: ListenStream= references a path below legacy directory /var/run/, updating /var/run/libvirt/libvirt-admin-sock → /run/libvirt/libvirt-admin-sock; please update the unit file accordingly.
+[   14.107743] systemd[1]: /usr/lib/systemd/system/libvirtd-ro.socket:8: ListenStream= references a path below legacy directory /var/run/, updating /var/run/libvirt/libvirt-sock-ro → /run/libvirt/libvirt-sock-ro; please update the unit file accordingly.
+[   14.108947] systemd[1]: /usr/lib/systemd/system/libvirtd.socket:6: ListenStream= references a path below legacy directory /var/run/, updating /var/run/libvirt/libvirt-sock → /run/libvirt/libvirt-sock; please update the unit file accordingly.
+[   14.451254] kauditd_printk_skb: 20 callbacks suppressed
+[   14.451255] audit: type=1131 audit(1585600725.900:36): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.452133] audit: type=1130 audit(1585600725.901:37): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=initrd-switch-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.452136] audit: type=1131 audit(1585600725.901:38): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=initrd-switch-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.520223] audit: type=1130 audit(1585600725.969:39): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.520247] audit: type=1131 audit(1585600725.969:40): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.633843] audit: type=1130 audit(1585600726.083:41): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.645479] audit: type=1130 audit(1585600726.095:42): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=nfs-convert comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.645505] audit: type=1131 audit(1585600726.095:43): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=nfs-convert comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.736011] EXT4-fs (dm-0): re-mounted. Opts: (null)
+[   14.738391] audit: type=1130 audit(1585600726.188:44): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.786359] Adding 3141628k swap on /dev/mapper/fedora_localhost--live-swap.  Priority:-2 extents:1 across:3141628k FS
+[   14.835354] audit: type=1130 audit(1585600726.284:45): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-modules-load comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   15.511056] systemd-journald[612]: Received client request to flush runtime journal.
+[   19.365545] input: PC Speaker as /devices/platform/pcspkr/input/input7
+[   19.391897] vboxguest: host-version: 6.1.4r136177 0x8000000f
+[   19.395745] vbg_heartbeat_init: Setting up heartbeat to trigger every 2000 milliseconds
+[   19.397071] input: VirtualBox mouse integration as /devices/pci0000:00/0000:00:04.0/input/input8
+[   19.401874] vboxguest: misc device minor 60, IRQ 20, I/O port d040, MMIO at 0x00000000f8400000 (size 0x0000000000400000)
+[   19.430778] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+[   19.446342] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+[   19.811413] kauditd_printk_skb: 10 callbacks suppressed
+[   19.811415] audit: type=1130 audit(1585600731.260:56): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-pvscan@8:2 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   20.651120] audit: type=1130 audit(1585600732.100:57): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-monitor comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   22.413662] snd_intel8x0 0000:00:05.0: white list rate for 1028:0177 is 48000
+[   22.576679] audit: type=1130 audit(1585600734.025:58): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-settle comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   22.689842] audit: type=1130 audit(1585600734.139:59): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dmraid-activation comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   22.689979] audit: type=1131 audit(1585600734.139:60): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dmraid-activation comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   22.903290] audit: type=1130 audit(1585600734.352:61): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-fsck@dev-disk-by\x2duuid-9d52b39e\x2dd957\x2d4cdf\x2d97c2\x2d80dc0a63d646 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   22.950638] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[   22.975341] audit: type=1130 audit(1585600734.424:62): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dracut-shutdown comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   23.077492] audit: type=1130 audit(1585600734.526:63): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   23.077495] audit: type=1131 audit(1585600734.526:64): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   23.156586] audit: type=1130 audit(1585600734.606:65): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=import-state comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   24.142475] RPC: Registered named UNIX socket transport module.
+[   24.142476] RPC: Registered udp transport module.
+[   24.142477] RPC: Registered tcp transport module.
+[   24.142477] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[   41.673652] Denying userspace vmm call type 0x000051
+[   50.183489] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[   50.183960] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+[   53.136160] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[   53.193951] tun: Universal TUN/TAP device driver, 1.6
+[   53.197244] virbr0: port 1(virbr0-nic) entered blocking state
+[   53.197246] virbr0: port 1(virbr0-nic) entered disabled state
+[   53.197304] device virbr0-nic entered promiscuous mode
+[   55.824410] virbr0: port 1(virbr0-nic) entered blocking state
+[   55.824415] virbr0: port 1(virbr0-nic) entered listening state
+[   55.928954] virbr0: port 1(virbr0-nic) entered disabled state
+[   62.753886] Denying userspace vmm call type 0x000051
+[   77.500854] rfkill: input handler disabled
+[   87.356372] rfkill: input handler enabled
+[   94.876228] ISO 9660 Extensions: Microsoft Joliet Level 3
+[   94.899896] ISO 9660 Extensions: RRIP_1991A
+[   95.430396] rfkill: input handler disabled
+[   96.090371] show_signal_msg: 1 callbacks suppressed
+[   96.090374] VBoxClient[2007]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[   96.090380] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  104.273325] VBoxClient[2255]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  104.273334] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  110.225640] VBoxClient[2307]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  110.225649] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  116.159169] VBoxClient[2391]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  116.159177] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  122.948039] VBoxClient[2444]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  122.948065] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  129.172053] VBoxClient[2460]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  129.172059] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  135.157324] VBoxClient[2491]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  135.157330] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  141.241367] VBoxClient[2536]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  141.241374] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  147.190390] VBoxClient[2550]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  147.190398] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  153.573570] VBoxClient[2576]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  153.573578] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  159.503823] VBoxClient[2596]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  159.503847] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  165.400195] VBoxClient[2611]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  165.400208] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  171.382896] VBoxClient[2624]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  171.382902] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  177.405075] VBoxClient[2637]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  177.405081] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  183.284143] VBoxClient[2661]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  183.284149] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  189.179376] VBoxClient[2674]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  189.179384] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  195.089034] VBoxClient[2690]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  195.089040] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  201.053969] VBoxClient[2703]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  201.053975] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  207.045237] VBoxClient[2726]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  207.045247] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  213.311709] VBoxClient[2740]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  213.311716] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  219.148027] VBoxClient[2753]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  219.148033] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  225.103349] VBoxClient[2786]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  225.103362] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  231.084953] VBoxClient[2802]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  231.084959] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  237.032032] VBoxClient[2825]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  237.032043] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  242.908023] VBoxClient[2838]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  242.908032] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  248.752691] VBoxClient[2851]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  248.752699] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  254.687629] VBoxClient[2864]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  254.687637] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  260.594967] VBoxClient[2877]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  260.594973] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  266.461709] VBoxClient[2890]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  266.461721] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  272.626529] VBoxClient[2903]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  272.626537] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  278.506203] VBoxClient[2916]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  278.506209] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  284.355260] VBoxClient[2931]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  284.355265] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  290.341119] VBoxClient[2974]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  290.341131] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  296.393667] VBoxClient[3022]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  296.393673] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  302.637663] VBoxClient[3169]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  302.637669] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  308.532315] VBoxClient[3184]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  308.532322] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  314.474530] VBoxClient[3205]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  314.474537] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  320.420664] VBoxClient[3222]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  320.420673] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  326.669848] VBoxClient[3236]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  326.669857] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  333.567327] VBoxClient[3249]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  333.567335] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  339.504034] VBoxClient[3263]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  339.504046] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  345.388009] VBoxClient[3277]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  345.388017] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  351.470256] VBoxClient[3290]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  351.470262] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  357.369914] VBoxClient[3308]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  357.369921] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  363.427203] VBoxClient[3322]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  363.427209] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  369.365552] VBoxClient[3335]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  369.365558] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  375.294048] VBoxClient[3348]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  375.294053] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  381.166832] VBoxClient[3361]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  381.166838] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  387.003639] VBoxClient[3374]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  387.003649] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  393.288662] VBoxClient[3387]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  393.288668] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  399.187364] VBoxClient[3400]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  399.187370] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  405.054007] VBoxClient[3413]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  405.054013] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  411.024792] VBoxClient[3427]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  411.024801] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  416.910563] VBoxClient[3440]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  416.910576] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  422.848263] VBoxClient[3453]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  422.848270] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  428.765956] VBoxClient[3466]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  428.765963] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  434.688259] VBoxClient[3492]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  434.688266] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  440.728455] VBoxClient[3515]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  440.728462] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  446.654909] VBoxClient[3528]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  446.654918] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  452.883485] VBoxClient[3541]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  452.883495] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  458.785109] VBoxClient[3554]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  458.785115] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  464.673069] VBoxClient[3567]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  464.673078] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  470.599364] VBoxClient[3583]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  470.599374] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  476.649930] VBoxClient[3631]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  476.649938] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  482.676476] VBoxClient[3648]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  482.676487] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  488.857304] VBoxClient[3663]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  488.857313] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  494.799186] VBoxClient[3676]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  494.799192] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  500.732857] VBoxClient[3689]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  500.732865] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  506.593374] VBoxClient[3702]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  506.593382] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  512.920220] VBoxClient[3715]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  512.920228] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  518.819201] VBoxClient[3728]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  518.819209] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  524.769992] VBoxClient[3741]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  524.769997] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  530.705138] VBoxClient[3754]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  530.705143] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  536.653369] VBoxClient[3769]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  536.653375] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  542.602478] VBoxClient[3795]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  542.602488] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  548.582928] VBoxClient[3818]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  548.582933] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  554.470600] VBoxClient[3831]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  554.470608] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  560.305235] VBoxClient[3844]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  560.305241] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  566.160216] VBoxClient[3858]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  566.160234] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  572.281532] VBoxClient[3871]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  572.281538] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  578.174744] VBoxClient[3884]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  578.174756] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  584.030246] VBoxClient[3897]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  584.030253] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  589.993851] VBoxClient[3910]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  589.993858] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  595.904048] VBoxClient[3923]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  595.904056] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  601.807725] VBoxClient[3936]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  601.807732] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  607.707136] VBoxClient[3951]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  607.707143] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  613.912492] VBoxClient[3970]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  613.912498] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  620.081558] VBoxClient[3983]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  620.081617] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  626.184664] VBoxClient[4000]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  626.184681] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  633.255204] VBoxClient[4016]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  633.255212] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  639.216704] VBoxClient[4029]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  639.216713] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  645.072692] VBoxClient[4042]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  645.072699] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  650.991933] VBoxClient[4056]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  650.991946] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  656.870397] VBoxClient[4070]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  656.870409] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  662.927444] VBoxClient[4083]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  662.927456] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  669.140738] VBoxClient[4098]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  669.140748] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  675.195437] VBoxClient[4112]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  675.195446] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  681.243867] VBoxClient[4125]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  681.243874] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  687.184304] VBoxClient[4138]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  687.184313] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  693.612305] VBoxClient[4151]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  693.612311] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  699.524438] VBoxClient[4164]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  699.524451] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  705.479990] VBoxClient[4177]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  705.479997] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  711.414501] VBoxClient[4190]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  711.414508] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  717.369281] VBoxClient[4203]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  717.369291] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  723.292234] VBoxClient[4216]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  723.292241] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  729.549360] VBoxClient[4234]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  729.549368] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  735.463106] VBoxClient[4254]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  735.463115] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  741.583122] VBoxClient[4271]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  741.583130] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  747.889187] VBoxClient[4285]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  747.889196] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  754.075893] VBoxClient[4298]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  754.075899] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  760.058397] VBoxClient[4347]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  760.058407] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  766.078029] VBoxClient[4360]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  766.078038] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  772.288521] VBoxClient[4376]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  772.288526] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  778.160956] VBoxClient[4389]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  778.160964] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  784.117479] VBoxClient[4404]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  784.117488] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  790.422768] VBoxClient[4418]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  790.422776] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  796.426617] VBoxClient[4431]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  796.426631] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  802.397117] VBoxClient[4445]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  802.397128] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  808.477485] VBoxClient[4460]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  808.477496] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  814.696925] VBoxClient[4473]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  814.696933] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  820.630581] VBoxClient[4486]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  820.630587] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  826.551387] VBoxClient[4499]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  826.551397] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  832.441400] VBoxClient[4512]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  832.441410] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  838.501157] VBoxClient[4525]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  838.501197] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  844.546663] VBoxClient[4538]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  844.546672] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  850.428410] VBoxClient[4551]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  850.428419] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  856.337834] VBoxClient[4565]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  856.337843] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  862.453068] VBoxClient[4578]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  862.453078] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  868.405071] VBoxClient[4596]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  868.405083] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  874.470238] VBoxClient[4609]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  874.470248] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  880.383195] VBoxClient[4632]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  880.383200] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  886.357482] VBoxClient[4648]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  886.357488] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  892.266288] VBoxClient[4671]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  892.266295] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  898.179815] VBoxClient[4684]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  898.179823] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  904.089890] VBoxClient[4697]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  904.089903] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  909.992995] VBoxClient[4712]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  909.993002] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  915.956731] VBoxClient[4762]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  915.956738] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  922.340664] VBoxClient[4778]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  922.340670] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  928.274156] VBoxClient[4794]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  928.274164] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  934.901789] VBoxClient[4808]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  934.901798] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  940.919025] VBoxClient[4821]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  940.919031] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  946.821294] VBoxClient[4834]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  946.821306] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  952.921421] VBoxClient[4847]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  952.921428] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  958.784749] VBoxClient[4861]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  958.784754] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  964.693182] VBoxClient[4874]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  964.693189] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  970.532922] VBoxClient[4887]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  970.532932] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  976.536367] VBoxClient[4903]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  976.536374] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  982.939700] VBoxClient[4918]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  982.939708] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  988.843385] VBoxClient[4936]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  988.843391] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[  994.826915] VBoxClient[4949]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[  994.826924] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1000.991598] VBoxClient[4962]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1000.991605] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1006.921471] VBoxClient[4975]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1006.921482] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1013.018688] VBoxClient[5044]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1013.018694] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1019.542206] VBoxClient[5189]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1019.542213] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1025.458018] VBoxClient[5244]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1025.458025] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1031.538910] VBoxClient[5276]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1031.538917] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1037.513716] VBoxClient[5316]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1037.513726] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1043.442224] VBoxClient[5332]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1043.442237] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1049.780022] VBoxClient[5347]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1049.780030] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1055.786603] VBoxClient[5361]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1055.786611] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1061.668036] VBoxClient[5374]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1061.668048] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1067.570361] VBoxClient[5391]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1067.570372] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1073.622112] VBoxClient[5408]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1073.622119] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1079.716477] VBoxClient[5423]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1079.716484] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1085.741196] VBoxClient[5436]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1085.741201] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1091.790238] VBoxClient[5449]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1091.790246] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1097.752931] VBoxClient[5467]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1097.752937] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1103.682431] VBoxClient[5480]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1103.682439] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1109.572059] VBoxClient[5497]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1109.572069] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1115.703053] VBoxClient[5512]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1115.703062] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1122.049008] VBoxClient[5525]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1122.049016] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1128.202003] VBoxClient[5538]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1128.202009] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1134.128295] VBoxClient[5557]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1134.128301] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1140.092489] VBoxClient[5571]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1140.092497] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1146.103063] VBoxClient[5585]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1146.103070] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1152.041864] VBoxClient[5598]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1152.041871] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1157.990367] VBoxClient[5611]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1157.990377] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1163.930283] VBoxClient[5625]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1163.930291] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1165.268984] SELinux:  Permission watch in class filesystem not defined in policy.
+[ 1165.268991] SELinux:  Permission watch in class file not defined in policy.
+[ 1165.268992] SELinux:  Permission watch_mount in class file not defined in policy.
+[ 1165.268993] SELinux:  Permission watch_sb in class file not defined in policy.
+[ 1165.268994] SELinux:  Permission watch_with_perm in class file not defined in policy.
+[ 1165.268994] SELinux:  Permission watch_reads in class file not defined in policy.
+[ 1165.268999] SELinux:  Permission watch in class dir not defined in policy.
+[ 1165.269000] SELinux:  Permission watch_mount in class dir not defined in policy.
+[ 1165.269001] SELinux:  Permission watch_sb in class dir not defined in policy.
+[ 1165.269001] SELinux:  Permission watch_with_perm in class dir not defined in policy.
+[ 1165.269002] SELinux:  Permission watch_reads in class dir not defined in policy.
+[ 1165.269007] SELinux:  Permission watch in class lnk_file not defined in policy.
+[ 1165.269008] SELinux:  Permission watch_mount in class lnk_file not defined in policy.
+[ 1165.269009] SELinux:  Permission watch_sb in class lnk_file not defined in policy.
+[ 1165.269010] SELinux:  Permission watch_with_perm in class lnk_file not defined in policy.
+[ 1165.269010] SELinux:  Permission watch_reads in class lnk_file not defined in policy.
+[ 1165.269014] SELinux:  Permission watch in class chr_file not defined in policy.
+[ 1165.269015] SELinux:  Permission watch_mount in class chr_file not defined in policy.
+[ 1165.269015] SELinux:  Permission watch_sb in class chr_file not defined in policy.
+[ 1165.269016] SELinux:  Permission watch_with_perm in class chr_file not defined in policy.
+[ 1165.269017] SELinux:  Permission watch_reads in class chr_file not defined in policy.
+[ 1165.269020] SELinux:  Permission watch in class blk_file not defined in policy.
+[ 1165.269021] SELinux:  Permission watch_mount in class blk_file not defined in policy.
+[ 1165.269021] SELinux:  Permission watch_sb in class blk_file not defined in policy.
+[ 1165.269022] SELinux:  Permission watch_with_perm in class blk_file not defined in policy.
+[ 1165.269023] SELinux:  Permission watch_reads in class blk_file not defined in policy.
+[ 1165.269026] SELinux:  Permission watch in class sock_file not defined in policy.
+[ 1165.269027] SELinux:  Permission watch_mount in class sock_file not defined in policy.
+[ 1165.269028] SELinux:  Permission watch_sb in class sock_file not defined in policy.
+[ 1165.269029] SELinux:  Permission watch_with_perm in class sock_file not defined in policy.
+[ 1165.269029] SELinux:  Permission watch_reads in class sock_file not defined in policy.
+[ 1165.269033] SELinux:  Permission watch in class fifo_file not defined in policy.
+[ 1165.269034] SELinux:  Permission watch_mount in class fifo_file not defined in policy.
+[ 1165.269034] SELinux:  Permission watch_sb in class fifo_file not defined in policy.
+[ 1165.269035] SELinux:  Permission watch_with_perm in class fifo_file not defined in policy.
+[ 1165.269036] SELinux:  Permission watch_reads in class fifo_file not defined in policy.
+[ 1165.269295] SELinux:  Class perf_event not defined in policy.
+[ 1165.269296] SELinux: the above unknown classes and permissions will be allowed
+[ 1165.269495] SELinux:  Converting 2480 SID table entries...
+[ 1168.615077] SELinux:  policy capability network_peer_controls=1
+[ 1168.615079] SELinux:  policy capability open_perms=1
+[ 1168.615080] SELinux:  policy capability extended_socket_class=1
+[ 1168.615081] SELinux:  policy capability always_check_network=0
+[ 1168.615082] SELinux:  policy capability cgroup_seclabel=1
+[ 1168.615082] SELinux:  policy capability nnp_nosuid_transition=1
+[ 1170.034340] VBoxClient[6107]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1170.034346] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1176.098355] VBoxClient[6219]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1176.098361] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1182.747989] VBoxClient[6366]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1182.747999] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1188.738854] VBoxClient[6379]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1188.738861] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1194.802054] VBoxClient[6392]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1194.802063] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1200.788542] VBoxClient[6405]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1200.788548] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1206.734490] VBoxClient[6424]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1206.734499] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1212.650968] VBoxClient[6437]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1212.650978] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1218.750618] VBoxClient[6456]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1218.750625] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1219.325254] loop: module loaded
+[ 1219.451511] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[ 1224.794130] VBoxClient[6517]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1224.794138] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1230.769687] VBoxClient[6530]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1230.769693] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1236.729978] VBoxClient[6543]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1236.729985] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1241.047891] usb 1-2: new full-speed USB device number 3 using ohci-pci
+[ 1241.308875] usb 1-2: New USB device found, idVendor=80ee, idProduct=0030, bcdDevice= 1.00
+[ 1241.308878] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 1241.308880] usb 1-2: Product: VirtualBox Webcam - USB2.0 VGA UVC WebCam
+[ 1241.308881] usb 1-2: Manufacturer: VirtualBox
+[ 1241.308882] usb 1-2: SerialNumber: 76c8fa29d348d8dc
+[ 1241.410720] mc: Linux media interface: v0.10
+[ 1241.446118] videodev: Linux video capture interface: v2.00
+[ 1241.493026] uvcvideo: Found UVC 1.00 device VirtualBox Webcam - USB2.0 VGA UVC WebCam (80ee:0030)
+[ 1241.530411] uvcvideo 1-2:1.0: Entity type for entity Processing 2 was not initialized!
+[ 1241.530414] uvcvideo 1-2:1.0: Entity type for entity Camera 1 was not initialized!
+[ 1241.530527] input: VirtualBox Webcam - USB2.0 VGA  as /devices/pci0000:00/0000:00:06.0/usb1/1-2/1-2:1.0/input/input9
+[ 1241.530671] usbcore: registered new interface driver uvcvideo
+[ 1241.530672] USB Video Class driver (1.1.1)
+[ 1242.719396] VBoxClient[6575]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1242.719407] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1248.680398] VBoxClient[6592]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1248.680406] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1254.588803] VBoxClient[6605]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1254.588809] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1260.525171] VBoxClient[6619]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1260.525179] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1266.509078] VBoxClient[6632]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1266.509085] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1272.503768] VBoxClient[6649]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1272.503774] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1278.530996] VBoxClient[6662]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1278.531005] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1284.460381] VBoxClient[6705]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1284.460388] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1290.711157] VBoxClient[6720]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1290.711163] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1296.685016] VBoxClient[6733]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1296.685022] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1302.655726] VBoxClient[6746]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1302.655733] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1308.567873] VBoxClient[6759]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1308.567881] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1314.494654] VBoxClient[6772]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1314.494684] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1320.443149] VBoxClient[6787]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1320.443159] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1326.364588] VBoxClient[6802]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1326.364596] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1332.316009] VBoxClient[6815]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1332.316015] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1338.288973] VBoxClient[6828]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1338.288982] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1344.202538] VBoxClient[6842]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1344.202545] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1350.195996] VBoxClient[6855]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1350.196005] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1356.164948] VBoxClient[6868]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1356.164955] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1362.139510] VBoxClient[6881]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1362.139519] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1368.090035] VBoxClient[6894]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1368.090043] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1374.090259] VBoxClient[6907]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1374.090268] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00
+[ 1380.057426] VBoxClient[6921]: segfault at 968 ip 00007f2d777d4e01 sp 00007fff78bcdf70 error 4 in libX11.so.6.3.0[7f2d777b4000+8f000]
+[ 1380.057433] Code: 56 49 89 f6 41 55 49 89 d5 41 54 49 89 cc 55 48 89 fd 53 4c 89 c3 48 83 ec 38 64 48 8b 04 25 28 00 00 00 48 89 44 24 28 31 c0 <48> 8b 87 68 09 00 00 48 85 c0 74 02 ff 10 ba 08 00 00 00 be 62 00

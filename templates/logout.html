@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>HOME</title>
+{% endblock %}
+
+{% block body %}
+<h2>Logged Out</h2>
+<hr>
+<p>Successfully Logged out!!</p>
+<p><a href="/login">Log in</a> to continue..</p>
+<hr>
+{% endblock %}
+
+
+{% block script%}
+    <script>
+        
+        document.cookie = "Email =  ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+        document.cookie = "CUI =  ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+        document.cookie = "UN =  ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+
+
+    </script>
+{% endblock%}

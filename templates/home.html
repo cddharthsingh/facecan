@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>HOME</title>
+{% endblock %}
+
+{% block body %}
+<h2>HOME</h2>
+<hr>
+<div>
+    <a href="/scan"> Scan User</a>
+</div>
+{% if faceNotUpdated %}
+<div>
+    <a href="/addface"> Add face</a>
+</div>
+{% endif %}
+<hr>
+<a href="/viewprofile">View Profile</a>
+{% if not faceNotUpdated %}
+<a href="/editprofile">Edit Profile</a>
+{% endif %}
+<a href="/logout">logout</a>
+
+{% endblock %}
+
+{% block script%}
+    <script>
+        var d = new Date();
+        d.setTime(d.getTime() + (20*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = "Email = {{Email}} ; expires";
+        document.cookie = "CUI = {{CUI}} ; expires;";
+        document.cookie = "UN = {{UN}} ; expires;";
+    </script>
+{% endblock%}

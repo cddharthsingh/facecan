@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>View Profile</title>
+{% endblock %}
+
+{% block body %}
+<h2>View Profile</h2>
+<hr>
+{% if face %}
+<div><span>Username : </span><span>{{face.userName}}</span></div><br>
+<div><span>Name : </span><span>{{face.name}}</span></div><br>
+<div><span>UPI ID : </span><span>{{face.upiId}}</span></div><br>
+<div><span>Contact Number : </span><span>{{face.contactNumber}}</span></div><br>
+<div><span>Email ID : </span><span>{{face.emailId}}</span></div><br>
+<div><span>Company : </span><span>{{face.company}}</span></div><br>
+<div><span>Address : </span><span>{{face.address}}</span></div><br>
+<div><span>Facebook URL : </span><span><a href={{face.fb_url}}>{{face.fb_url}}</a></span></div><br>
+{% set instaUrl = 'https://instagram.com/' + face.insta_handle %}
+<div><span>Instagram handle : </span><span><a href={{instaUrl}} >{{face.insta_handle}}</a></span></div><br>
+{% set twitterUrl = 'https://twitter.com/' + face.twitter %}
+<div><span>Twitter : </span><span><a href={{twitterUrl}}>{{face.twitter}}</a></span></div><br>
+{% endif %}
+<hr>
+<a href="/editprofile">Edit Profile</a>
+<a href="/logout">logout</a>
+
+{% endblock %}
