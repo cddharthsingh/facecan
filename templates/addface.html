@@ -6,13 +6,18 @@
 
 {% block body %}
 	<h2>Add Face</h2>
-
-	<p>Add your Face</p>
+    {% if msg%}
+    <p> {{msg}}</p>
+    {% endif %}
+    <p>Click or upload your photo with clearly visible Face!</p>
+    
     <form action="/addface" method="POST", enctype="multipart/form-data">
-    <label>Select Image</label>
-    <input type="file" name="image" id="image">
+    <label>Click Image</label>
+    <input type="file" accept="image/*" capture="camera" name="image" id="image">
+    
     <button type="submit">Upload Image</button>
     
     </form>
+    
 
 {% endblock %}

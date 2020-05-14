@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Scan Face</title>
+{% endblock %}
+
+{% block body %}
+	<h2>Scan Face</h2>
+    {% if msg%}
+    <p> {{msg}}</p>
+    {% endif %}
+    <p>Scan single face</p>
+    
+    <form action="/scan" method="POST", enctype="multipart/form-data">
+    <label>Click Image</label>
+    <input type="file" accept="image/*" capture="environment" name="image" id="image">
+    <button type="submit">Scan Image</button>
+    </form>
+
+{% endblock %}

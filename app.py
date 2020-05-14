@@ -10,8 +10,15 @@
 
 import pyrebase
 # from flask import *
-from flask import render_template, request, make_response, Flask
+from flask import render_template, request, make_response, Flask, redirect
 from flask_sqlalchemy import SQLAlchemy
+import os
+import shutil
+# from werkzeug.utils import secure_filename
+import cv2
+import face_recognition
+import numpy as np
+import pickle
 
 #pyrebase Setup
 config = {
@@ -33,6 +40,8 @@ app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///facedatadb.db'
 db = SQLAlchemy(app)
+
+app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["JPEG", "JPG", "PNG"]
 
 
 class faces(db.Model):
@@ -64,6 +73,9 @@ class faces(db.Model):
 
 currentUserId = ''
 faceImage = ''
+faceDataList = []
+faceNameList = []
+
 
 @app.route('/')
 def index():
@@ -75,12 +87,13 @@ def index():
 	else:
 		faceInfo = faces.query.filter_by(userId=CuI).first()
 		
-		if (faceInfo):
-			return render_template('home.html', CUI=CuI, faceNotUpdated=False, Email=Email)
-		else:
+		try:
+			if (faceInfo.faceImage):
+				return render_template('home.html', CUI=CuI, faceNotUpdated=False, Email=Email)
+		except:
 			return render_template('home.html', CUI=CuI, faceNotUpdated=True, Email=Email)
 		
-
+	return render_template('home.html')
 
 
 
@@ -105,13 +118,15 @@ def basic():
 			except:
 				return render_template('login.html', us=unsucc)
 			
-			faceInfo = faces.query.filter_by(userId=str(currentUserId))
+			faceInfo = faces.query.filter_by(userId=str(currentUserId)).first()
 
 			#for checking if user is having username or not
-			if faceInfo.count()>0:
-				pass
+
+			if (faceInfo):
+				print(make_response('..').set_cookie('UN', faceInfo.userName))
 			else:
-				return render_template('addUserName.html', CUI=currentUserId, Email=email)
+				return render_template('addUserName.html', CUI=currentUserId, Email=email)			
+
 
 			#for sending user to homepage depending upon if his facedata is uploaded or not	
 			faceInfo = faces.query.filter_by(userId=str(currentUserId)).first()
@@ -127,10 +142,10 @@ def basic():
 
 		faceInfo = faces.query.filter_by(userId=CuI).first()
 
-		if (faceInfo.faceImage):
-				return render_template('home.html', CUI=CuI, faceNotUpdated=False, Email=Email, UN=faceInfo.userName)
+		if (faceInfo):
+				return render_template('home.html', CUI=CuI, faceNotUpdated=False, Email=Email)
 		else:
-			return render_template('home.html', CUI=CuI, faceNotUpdated=True, Email=Email, UN=faceInfo.userName)
+			return render_template('home.html', CUI=CuI, faceNotUpdated=True, Email=Email)
 
 
 	return render_template('login.html')
@@ -150,11 +165,11 @@ def editprofile():
 
 	if request.method == 'POST':
 		f = faces.query.filter_by(userId=str(CuI)).first()
-		f.userName = request.form['userName']
-		f.name = request.form['name']
+		# f.userName = request.form['userName']
+		# f.name = request.form['name']
 		f.upiId = request.form['upiId']
 		f.contactNumber = request.form['contactNumber']
-		f.emailId = request.form['emailId']
+		# f.emailId = request.form['emailId']
 		f.company = request.form['company']
 		f.address = request.form['address']
 		f.fb_url = request.form['fb_url']
@@ -222,6 +237,8 @@ def signup():
 	return render_template('signup.html')
 
 
+
+
 @app.route('/addUserName', methods=['GET','POST'])
 def addUserName():
 	CuI = str(request.cookies.get('CUI'))
@@ -232,13 +249,14 @@ def addUserName():
 	
 	if request.method == 'POST':
 		newUserName = request.form['userName']
+		name = request.form['name']
 
 		faceInfo = faces.query.filter_by(userName=newUserName)
 		#for checking if username already exists
 		if faceInfo.count()>0:
 			return render_template('addUserName.html', msg='username already taken! try another', CUI=CuI, Email=Email)
 		else:
-			newRecord = faces(userId=CuI,userName=newUserName,emailId=Email)
+			newRecord = faces(userId=CuI,userName=newUserName,emailId=Email, name=name)
 			db.session.add(newRecord)
 			db.session.commit()
 			faceInfo = faces.query.filter_by(userId= CuI).first()
@@ -250,15 +268,182 @@ def addUserName():
 	return render_template('home.html', CUI=CuI, faceNotUpdated=True, Email=Email)
 
 
-@app.route('/scan')
-def scanface():
-	return '</h1>Scan face wali functionality add karega mai</h1>'
+
+
+
+def allowed_image(filename):
+
+    # We only want files with a . in the filename
+    if not "." in filename:
+        return False
+
+    # Split the extension from the filename
+    ext = filename.rsplit(".", 1)[1]
+
+    # Check if the extension is in ALLOWED_IMAGE_EXTENSIONS
+    if ext.upper() in app.config["ALLOWED_IMAGE_EXTENSIONS"]:
+        return True
+    else:
+        return False
+
+
+
 
 @app.route('/addface', methods=['GET','POST'])
 def addface():
+	CuI = str(request.cookies.get('CUI'))
+	Email = str(request.cookies.get('Email'))
+
+	if (CuI == None or Email == None or Email == 'None' or CuI == 'None' or Email == '' or CuI == ''):
+		return render_template('login.html', msg='Login to continue...')
+
+
 	if request.method=='POST':
-		return 'Bahot achhe, wait karo, app under construction'
+
+		if request.files:
+			image = request.files["image"]
+
+			if image.filename == "":
+				return render_template('addface.html', msg='No Filename!')
+
+			user = request.cookies.get('UN')
+			if allowed_image(image.filename):
+				imgName = 'static/imageSet/' + str(user) + '.' + image.filename.rsplit(".", 1)[1].lower()
+				image.save(os.path.join(app.root_path, imgName))
+
+				image = cv2.imread(imgName, cv2.IMREAD_UNCHANGED)
+				width = int(image.shape[1] * (20 / 100))
+				height = int(image.shape[0] * (20 / 100))
+				dim = (width, height)
+				# resize image
+				resizedImage = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
+				cv2.imwrite(imgName, resizedImage)
+
+
+				image = face_recognition.load_image_file(imgName)
+				face_locations = face_recognition.face_locations(image)
+				if len(face_locations)!=1:
+					os.remove(imgName)
+					return render_template('addface.html', msg='Image can not be added, it has either zero or more than one recognizable faces!')
+				else:
+					f = faces.query.filter_by(userName=str(user)).first()
+					f.faceImage = True
+					db.session.commit()
+
+					# global faceDataList
+					# global faceNameList
+
+					# data = pickle.loads(open("encodings.pickle", "rb").read())
+					# faceDataList = data["encodings"]
+					# faceNameList= data["names"]
+
+					faceDataList = []
+					faceNameList = []
+
+					imUserFace = face_recognition.load_image_file(imgName)
+					imUserFace_encod = face_recognition.face_encodings(imUserFace)[0]
+
+					faceDataList.append(imUserFace_encod)
+					faceNameList.append(user)
+
+					print(faceDataList)
+					print(faceNameList)
+
+					data = {"encodings": faceDataList, "names": faceNameList}
+					f = open("encodings.pickle", "wb")
+					f.write(pickle.dumps(data))
+					f.close()
+
+				return redirect('/')
+			
+			else:
+				print("That file extension is not allowed")
+				return render_template('addface.html', msg='That file extension is not allowed')
+
 	return render_template('addface.html')
+
+
+
+
+
+
+@app.route('/scan', methods=['GET','POST'])
+def scanface():
+	CuI = str(request.cookies.get('CUI'))
+	Email = str(request.cookies.get('Email'))
+
+	if (CuI == None or Email == None or Email == 'None' or CuI == 'None' or Email == '' or CuI == ''):
+		return render_template('login.html', msg='Login to continue...')
+
+
+	if request.method=='POST':
+
+		if request.files:
+			image = request.files["image"]
+
+			if image.filename == "":
+				return render_template('addface.html', msg='No Filename!')
+
+			user = request.cookies.get('UN')
+			if allowed_image(image.filename):
+				
+				#create directory for current user
+				dirName = 'static/newImg/' + CuI + 'u/'
+				dirToMake = os.path.join(app.root_path, dirName) 
+				os.mkdir(dirToMake)
+
+				imgName = 'static/newImg/' + CuI + 'u/' + image.filename
+				image.save(os.path.join(app.root_path, imgName))
+				
+				# resize image
+				image = cv2.imread(imgName, cv2.IMREAD_UNCHANGED)
+				width = int(image.shape[1] * (30 / 100))
+				height = int(image.shape[0] * (30 / 100))
+				dim = (width, height)
+				resizedImage = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
+				cv2.imwrite(imgName, resizedImage)
+
+				try:
+					imCheck = face_recognition.load_image_file(imgName)
+					imCheck_encod = face_recognition.face_encodings(imCheck)[0]
+					dirName = 'static/newImg/' + CuI + 'u'
+					shutil.rmtree(dirName)
+
+					results = face_recognition.compare_faces(faceDataList, imCheck_encod)
+					if len(results)==0:
+						return render_template('scanface.html', msg='User is not registered')
+					else:
+						counter = 0
+						for i in results:
+							if i:
+								resultRedirect = '/scanresult/' + faceNameList[counter]
+								return redirect(resultRedirect)
+							else:
+								counter+=1
+					
+					return render_template('scanface.html', msg='User is not registered')			
+					print(imCheck_encod)
+
+				except:
+					return render_template('scanface.html', msg='No face found')
+								
+				
+
+
+				# image = cv2.imread(imgName, cv2.IMREAD_UNCHANGED)
+			else:
+				print("That file extension is not allowed")
+				return render_template('scanface.html', msg='That file extension is not allowed')
+
+	return render_template('scanface.html')
+
+
+
+
+@app.route('/scanresult/<string:user>')
+def scanresult(user):
+	return render_template('scanresult.html', msg=user)
+	print(user)
 
 if __name__ == '__main__':
 	app.run(debug=True)

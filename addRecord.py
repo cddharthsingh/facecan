@@ -17,8 +17,8 @@ userkeyBox = data["names"]
 # userkeyBox = []
 
 
-# # capturing image from webcam using open cv2
-# #number of frames to throw away while the camera adjusts to light
+# capturing image from webcam using open cv2
+#number of frames to throw away while the camera adjusts to light
 # ramp_frames = 30
 # # initializing camera with port 0 (default for webcam)
 # camera = cv2.VideoCapture(-1)
