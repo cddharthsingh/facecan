@@ -5,16 +5,39 @@
 {% endblock %}
 
 {% block body %}
-	<h2>Add username</h2>
-	{% if msg%}
-	{{msg}}
-	{% endif%}
-	<form action="/addUserName" method="post">
-        Username: <input type="name" name="userName"><br>
-        Name: <input type="name" name="name"><br>
-		<input type="submit" name="submit">
-	</form>
-{% endblock %}
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Add Username</h5>
+            <form class="form-signin" action="/addUserName" method="post">
+              <div class="form-label-group">
+                <input type="name" id="userName" class="form-control" name="userName" placeholder="Username" required autofocus >
+                <label for="userName">Username</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="name" id="name" class="form-control" name="name" placeholder="Name">
+                <label for="name">name</label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Add Username</button>
+              {% if msg %}
+              <br>
+              <p>{{msg}}</p>
+              {% endif %}
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+
+
 
 {% block script%}
     <script>

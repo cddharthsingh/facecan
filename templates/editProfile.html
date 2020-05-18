@@ -5,23 +5,53 @@
 {% endblock %}
 
 {% block body %}
-<h2>Edit Profile</h2>
-<hr>
 
-<form action="/editprofile" method='POST'>
-    <span>Username : </span>{{face.userName}}<br>
-    <span>Name : </span>{{face.name}}<br>
-    <span>UPI ID : </span><input type="text" placeholder="UPI ID" value={{face.upiId}} name="upiId" id="upiId"><br>
-    <span>Contact Number : </span><input type="tel" placeholder="Contact Number" value={{face.contactNumber}} name="contactNumber" id="contactNumber"><br>
-    <span>Email ID : </span>{{face.emailId}}<br>
-    <span>Company : </span><input type="text" placeholder="Company" value={{face.company}} name="company" id="company"><br>
-    <span>Address : </span><input type="text" placeholder="Address" value={{face.address}} name="address" id="address"><br>
-    <span>Facebook URL : </span><input type="url" placeholder="Facebook URL" value={{face.fb_url}} name="fb_url" id="fb_url"><br>
-    <span>Instagram handle : </span><input type="text" placeholder="Instagram handle" value={{face.insta_handle}} name="insta_handle" id="insta_handle"><br>
-    <span>Twitter : </span><input type="text" placeholder="Twitter handle" value={{face.twitter}} name="twitter" id="twitter"><br>
-    <input type="submit" value="Save">
-</form>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Edit Profile</h5>
+            <form class="form-signin" action="/editprofile" method="post">
+              <div class="form-label-group">
+                <input type="text" placeholder="UPI ID" value={{face.upiId}} name="upiId" id="upiId" class="form-control">
+                <label for="upiId">UPI ID</label>
+              </div>
+              <div class="form-label-group">
+                <input type="tel" placeholder="Contact Number" value={{face.contactNumber}} name="contactNumber" id="contactNumber" class="form-control">
+                <label for="contactNumber">Contact Number</label>
+              </div>
+              <div class="form-label-group">
+                <input type="text" placeholder="Company" value={{face.company}} name="company" id="company" class="form-control">
+                <label for="company">Company</label>
+              </div>
+              <div class="form-label-group">
+                <input type="text" placeholder="Address" value={{face.address}} name="address" id="address" class="form-control">
+                <label for="address">Address</label>
+              </div>
+              <div class="form-label-group">
+                <input type="url" placeholder="Facebook URL" value={{face.fb_url}} name="fb_url" id="fb_url" class="form-control">
+                <label for="fb_url">Facebook URL</label>
+              </div>
+              <div class="form-label-group">
+                <input type="text" placeholder="Instagram handle" value={{face.insta_handle}} name="insta_handle" id="insta_handle" class="form-control">
+                <label for="insta_handle">Instagram Handle</label>
+              </div>
+              <div class="form-label-group">
+                <input type="text" placeholder="Twitter handle" value={{face.twitter}} name="twitter" id="twitter" class="form-control">
+                <label for="twitter">Twitter Handle</label>
+              </div>
 
-<hr>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Save Details</button>
+              
+              <hr class="my-4">
+              <a style="margin-right: 20px;" style="text-decoration: none;" href="/">Home</a>
+              <a style="margin-right: 20px;" style="text-decoration: none;" href="/addface">Add face</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}

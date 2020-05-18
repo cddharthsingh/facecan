@@ -5,16 +5,34 @@
 {% endblock %}
 
 {% block body %}
-	<h2>Scan Face</h2>
-    {% if msg%}
-    <p> {{msg}}</p>
-    {% endif %}
-    <p>Scan single face</p>
+    <div class="container">
+		<div class="row">
+		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+			<div class="card card-signin my-5">
+			  <div class="card-body">
+				<h5 class="card-title text-center">Scan User</h5>
+				<form class="form-signin" action="/scan" method="POST", enctype="multipart/form-data">
+				  <div class="form-label-group">
+					<input type="file" id="image" class="form-control" name="image" accept="image/*" capture="camera" required autofocus >
+				  </div>
+				  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Upload to scan</button>
+				  {% if msg %}
+				  <br>
+				  <p>{{msg}}</p>
+				  {% endif %}
+					
+				  <hr class="my-4">
+				  Click image with focus on single face
+				</form>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
     
-    <form action="/scan" method="POST", enctype="multipart/form-data">
-    <label>Click Image</label>
-    <input type="file" accept="image/*" capture="environment" name="image" id="image">
-    <button type="submit">Scan Image</button>
-    </form>
+
+
+
+
 
 {% endblock %}

@@ -2,25 +2,90 @@
 
 {% block head %}
 <title>HOME</title>
+<style>
+.box a{
+  text-align:center;
+    position:relative;
+}
+.box a img{
+    position:relative;
+    top: 50%;
+    left: 50%;
+    height: 120px;
+    width: 120px;
+    margin-top: 15px;
+    margin-left: -150px;
+}
+.box {
+    width:150px;
+    height:150px;
+    background:#FFF;
+    margin:40px auto;
+    border-radius: 15px;
+}
+.effect7
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 8px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow:0 1px 8px rgba(0, 0, 0, 0.3);
+            box-shadow:0 1px 8px rgba(0, 0, 0, 0.3);
+}
+.effect7:before, .effect7:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 30px;
+    border-radius:100px / 30px;
+}
+.effect7:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+
+</style>
 {% endblock %}
 
 {% block body %}
-<h2>HOME</h2>
-<hr>
-<div>
-    <a href="/scan"> Scan User</a>
-</div>
-{% if faceNotUpdated %}
-<div>
-    <a href="/addface"> Add face</a>
-</div>
-{% endif %}
-<hr>
-<a href="/viewprofile">View Profile</a>
-{% if not faceNotUpdated %}
-<a href="/editprofile">Edit Profile</a>
-{% endif %}
-<a href="/logout">logout</a>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            
+            {% if faceNotUpdated %}
+            <h5 class="card-title text-center">Add your face</h5>
+                <div class="box effect7">
+                    <a style="display: block; margin: auto;" href="/addface">
+                        <img src="../static/icon/add.png">                    
+                    </a>
+                </div>
+            {% endif %}
+            <h5 class="card-title text-center">Scan a User</h5>
+            <div class="box effect7">
+                <a style="display: block; margin: auto;" href="/scan">
+                    <img src="../static/icon/scan.png">                    
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
 

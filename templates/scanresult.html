@@ -2,12 +2,90 @@
 
 {% block head %}
 <title>Scan Result</title>
+<link rel="stylesheet" href="../../static/css/bootstrap.css">
+<link rel="stylesheet" href="../../static/css/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 {% endblock %}
 
 {% block body %}
-	<h2>Scan Result</h2>
-	{% if msg%}
-	{{msg}}
-    {% endif%}
-    
+
+	{% if face %}
+	{% set instaUrl = 'https://instagram.com/' + face.insta_handle %}
+	{% set twitterUrl = 'https://twitter.com/' + face.twitter %}
+	{% endif %}
+
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+			<div class="card card-signin my-5">
+			  <div class="card-body">
+				<h5 class="card-title text-center">Scan Result</h5>
+				<p style="margin-top: -10px;"> </p>
+				<h5 class="card-title text-center"><b>{{face.name}}</b></h5>
+				<hr class="my-4">
+				<p style="margin-bottom: 5px;"><b>UPI Id : </b> {{face.upiId}}</p>
+				<br>
+
+				<form class="form-signin" action="/payment/{{face.upiId}}/{{face.userName}}" method="post">
+				  <div class="form-label-group">
+					<input type="number" id="amount" class="form-control" name="amount" placeholder="Amount" min="1" required autofocus >
+					<label for="amount">Amount</label>
+				  </div>
+	
+				  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Pay using UPI apps</button>
+				  <hr class="my-4">
+				</form>
+				<p style="margin-bottom: 5px; color: #007bff;"><b>PERSONAL INFORMATION</b></p>
+				<br>
+				<div class="row">
+					<div class="col-sm">
+					  <b>Contact Number</b>
+					</div>
+					<div class="col-sm">
+					  <a style="text-decoration: none;" href="tel:{{face.contactNumber}}">{{face.contactNumber}}</a>
+					</div>
+				</div>
+				<div class="row" style="margin-top: 8px;">
+					<div class="col-sm">
+					  <b>Email ID</b>
+					</div>
+					<div class="col-sm">
+					  <a style="text-decoration: none;" href="mailto:{{face.emailId}}">{{face.emailId}}</a>
+					</div>
+				</div>
+				<div class="row" style="margin-top: 8px;">
+					<div class="col-sm">
+					  <b>Company</b>
+					</div>
+					<div class="col-sm">
+					  {{face.company}}
+					</div>
+				</div>
+				<div class="row" style="margin-top: 8px;">
+					<div class="col-sm">
+					  <b>Address</b>
+					</div>
+					<div class="col-sm">
+					  {{face.address}}
+					</div>
+				</div>
+				<div class="row" style="margin-top: 15px;">
+					<div class="text-center">
+						<div class="col-md">
+							<a href="{{face.fb_url}}"><img style="height: 30px; margin: 10px; margin-left: 0px;" src="../../static/icon/fb.png" alt=""></a>
+							<a href="{{instaUrl}}"><img style="height: 30px; margin: 10px;" src="../../static/icon/instagram.png" alt=""></a>
+							<a href="{{twitterUrl}}"><img style="height: 30px; margin: 10px;" src="../../static/icon/twitter.png" alt=""></a>
+						</div>
+						
+						
+					</div>
+
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+<script src="../../static/js/bootstrap.js"></script>
+<script src="../../static/js/bootstrap.bundle.min.js"></script>
 {% endblock %}

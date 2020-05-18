@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
     <link rel="stylesheet" href="../static/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     {% block head %}{% endblock %}
 </head>
 {% block script%}{% endblock %}
 <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-color: #1A1B25 !important;">
+        <a class="navbar-brand" href="/">Facecan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item active" style="margin-left: 10px;">
+              <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item" style="margin-left: 10px;">
+              <a class="nav-link" href="/viewprofile">Profile</a>
+            </li>
+          </ul>
+          <a href="/login" class="btn btn-primary" style="margin-left: 10px;">Log in</a>
+          <a href="/logout" class="btn btn-danger" style="margin-left: 10px;">Logout</a>
+        
+
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        </div>
+      </nav>
     {% block body %}{% endblock %}
 </body>
    
-
+<script src="../static/js/bootstrap.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
 </html>

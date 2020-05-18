@@ -1,20 +1,8 @@
-# print('Choose: \n1. Scan Face\n2. Register')
-# choice = int(input('Your choice: '))
-
-# # executing addRecord.py file if user chooses to register
-# if choice==2:
-# 	exec(open('addRecord.py').read())
-# else:
-# 	exec(open('viewRecord.py').read())
-
-
 import pyrebase
-# from flask import *
 from flask import render_template, request, make_response, Flask, redirect
 from flask_sqlalchemy import SQLAlchemy
 import os
 import shutil
-# from werkzeug.utils import secure_filename
 import cv2
 import face_recognition
 import numpy as np
@@ -199,7 +187,7 @@ def viewprofile():
 
 
 
-@app.route('/logout')
+@app.route('/logout', methods=["GET", "POST"])
 def logout():
 	global currentUserId
 	currentUserId = ''
@@ -304,6 +292,9 @@ def addface():
 			image = request.files["image"]
 
 			if image.filename == "":
+				f = faces.query.filter_by(userName=str(user)).first()
+				f.faceImage = False
+				db.session.commit()
 				return render_template('addface.html', msg='No Filename!')
 
 			user = request.cookies.get('UN')
@@ -311,13 +302,14 @@ def addface():
 				imgName = 'static/imageSet/' + str(user) + '.' + image.filename.rsplit(".", 1)[1].lower()
 				image.save(os.path.join(app.root_path, imgName))
 
-				image = cv2.imread(imgName, cv2.IMREAD_UNCHANGED)
-				width = int(image.shape[1] * (20 / 100))
-				height = int(image.shape[0] * (20 / 100))
-				dim = (width, height)
+				
 				# resize image
-				resizedImage = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
-				cv2.imwrite(imgName, resizedImage)
+				# image = cv2.imread(imgName, cv2.IMREAD_UNCHANGED)
+				# width = int(image.shape[1] * (20 / 100))
+				# height = int(image.shape[0] * (20 / 100))
+				# dim = (width, height)
+				# resizedImage = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
+				# cv2.imwrite(imgName, resizedImage)
 
 
 				image = face_recognition.load_image_file(imgName)
@@ -350,13 +342,14 @@ def addface():
 					print(faceNameList)
 
 					data = {"encodings": faceDataList, "names": faceNameList}
-					f = open("encodings.pickle", "wb")
-					f.write(pickle.dumps(data))
-					f.close()
+					pickle.dump(data, open("encodings.pickle", "wb"), protocol=0)
 
 				return redirect('/')
 			
 			else:
+				f = faces.query.filter_by(userName=str(user)).first()
+				f.faceImage = False
+				db.session.commit()
 				print("That file extension is not allowed")
 				return render_template('addface.html', msg='That file extension is not allowed')
 
@@ -382,7 +375,7 @@ def scanface():
 			image = request.files["image"]
 
 			if image.filename == "":
-				return render_template('addface.html', msg='No Filename!')
+				return render_template('scanface.html', msg='No Filename!')
 
 			user = request.cookies.get('UN')
 			if allowed_image(image.filename):
@@ -396,18 +389,22 @@ def scanface():
 				image.save(os.path.join(app.root_path, imgName))
 				
 				# resize image
-				image = cv2.imread(imgName, cv2.IMREAD_UNCHANGED)
-				width = int(image.shape[1] * (30 / 100))
-				height = int(image.shape[0] * (30 / 100))
-				dim = (width, height)
-				resizedImage = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
-				cv2.imwrite(imgName, resizedImage)
+				# image = cv2.imread(imgName, cv2.IMREAD_UNCHANGED)
+				# width = int(image.shape[1] * (30 / 100))
+				# height = int(image.shape[0] * (30 / 100))
+				# dim = (width, height)
+				# resizedImage = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
+				# cv2.imwrite(imgName, resizedImage)
 
 				try:
 					imCheck = face_recognition.load_image_file(imgName)
 					imCheck_encod = face_recognition.face_encodings(imCheck)[0]
 					dirName = 'static/newImg/' + CuI + 'u'
 					shutil.rmtree(dirName)
+
+					data = pickle.loads(open("encodings.pickle", "rb").read())
+					faceDataList = data["encodings"]
+					faceNameList= data["names"]
 
 					results = face_recognition.compare_faces(faceDataList, imCheck_encod)
 					if len(results)==0:
@@ -428,8 +425,6 @@ def scanface():
 					return render_template('scanface.html', msg='No face found')
 								
 				
-
-
 				# image = cv2.imread(imgName, cv2.IMREAD_UNCHANGED)
 			else:
 				print("That file extension is not allowed")
@@ -440,10 +435,27 @@ def scanface():
 
 
 
-@app.route('/scanresult/<string:user>')
+@app.route('/scanresult/<string:user>/')
 def scanresult(user):
-	return render_template('scanresult.html', msg=user)
-	print(user)
+	CuI = str(request.cookies.get('CUI'))
+	Email = str(request.cookies.get('Email'))
+
+	if (CuI == None or Email == None or Email == 'None' or CuI == 'None' or Email == '' or CuI == ''):
+		return render_template('login.html', msg='Login to continue...')
+
+	try:
+		f = faces.query.filter_by(userName=user).first()
+		print(user)
+		return render_template('scanresult.html', face=f)
+	except:
+		return 'Some Error Happened'
+
+
+@app.route('/payment/<string:upiId>/<string:userName>', methods=['GET','POST'])
+def payment(upiId, userName):
+	amount = request.form["amount"]
+	payUrl = 'upi://pay?pa='+upiId+'&pn='+userName+'&mc=null&tid=null&tr=test101&tn=This%20is%20test%20payment&am='+amount+'&mam=null&cu=INR&url=null'
+	return render_template("pay.html", payUrl=payUrl)
 
 if __name__ == '__main__':
 	app.run(debug=True)

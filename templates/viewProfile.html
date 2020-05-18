@@ -2,27 +2,100 @@
 
 {% block head %}
 <title>View Profile</title>
+<link rel="stylesheet" href="../../static/css/bootstrap.css">
+<link rel="stylesheet" href="../../static/css/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 {% endblock %}
 
 {% block body %}
-<h2>View Profile</h2>
-<hr>
-{% if face %}
-<div><span>Username : </span><span>{{face.userName}}</span></div><br>
-<div><span>Name : </span><span>{{face.name}}</span></div><br>
-<div><span>UPI ID : </span><span>{{face.upiId}}</span></div><br>
-<div><span>Contact Number : </span><span>{{face.contactNumber}}</span></div><br>
-<div><span>Email ID : </span><span>{{face.emailId}}</span></div><br>
-<div><span>Company : </span><span>{{face.company}}</span></div><br>
-<div><span>Address : </span><span>{{face.address}}</span></div><br>
-<div><span>Facebook URL : </span><span><a href={{face.fb_url}}>{{face.fb_url}}</a></span></div><br>
 {% set instaUrl = 'https://instagram.com/' + face.insta_handle %}
-<div><span>Instagram handle : </span><span><a href={{instaUrl}} >{{face.insta_handle}}</a></span></div><br>
 {% set twitterUrl = 'https://twitter.com/' + face.twitter %}
-<div><span>Twitter : </span><span><a href={{twitterUrl}}>{{face.twitter}}</a></span></div><br>
-{% endif %}
-<hr>
-<a href="/editprofile">Edit Profile</a>
-<a href="/logout">logout</a>
 
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Profile</h5>
+            <p style="margin-top: -10px;"> </p>
+            <h5 class="card-title text-center"><b>{{face.name}}</b></h5>
+            <hr class="my-4">
+            <p style="margin-bottom: 5px; color: #007bff;"><b>PERSONAL INFORMATION</b></p>
+            <br>
+            {% if face %}
+            <div class="row">
+                <div class="col-sm">
+                  <b>Username</b>
+                </div>
+                <div class="col-sm">
+                   {{face.userName}}
+                </div>
+            </div>
+            <div class="row" style="margin-top: 8px;">
+                <div class="col-sm">
+                  <b>UPI ID</b>
+                </div>
+                <div class="col-sm">
+                    {{face.upiId}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                  <b>Contact Number</b>
+                </div>
+                <div class="col-sm">
+                  <a style="text-decoration: none;" href="tel:{{face.contactNumber}}">{{face.contactNumber}}</a>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 8px;">
+                <div class="col-sm">
+                  <b>Email ID</b>
+                </div>
+                <div class="col-sm">
+                  <a style="text-decoration: none;" href="mailto:{{face.emailId}}">{{face.emailId}}</a>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 8px;">
+                <div class="col-sm">
+                  <b>Company</b>
+                </div>
+                <div class="col-sm">
+                  {{face.company}}
+                </div>
+            </div>
+            <div class="row" style="margin-top: 8px;">
+                <div class="col-sm">
+                  <b>Address</b>
+                </div>
+                <div class="col-sm">
+                  {{face.address}}
+                </div>
+            </div>
+            <div class="row" style="margin-top: 15px;">
+                <div class="text-center">
+                    <div class="col-md">
+                        <a href="{{face.fb_url}}"><img style="height: 30px; margin: 10px; margin-left: 0px;" src="../../static/icon/fb.png" alt=""></a>
+                        <a href="{{instaUrl}}"><img style="height: 30px; margin: 10px;" src="../../static/icon/instagram.png" alt=""></a>
+                        <a href="{{twitterUrl}}"><img style="height: 30px; margin: 10px;" src="../../static/icon/twitter.png" alt=""></a>
+                    </div>   
+                </div>
+            </div>
+            {% endif %}
+            <hr class="my-4">
+            <div class="row" style="margin-top: 8px;">
+                <div class="col-sm">
+                    <a style="text-decoration: none;" href="/">Home</a>
+                </div>
+                <div class="col-sm">
+                    <a style="text-decoration: none;" href="/editprofile">Edit Profile</a>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="../../static/js/bootstrap.js"></script>
+<script src="../../static/js/bootstrap.bundle.min.js"></script>
 {% endblock %}
