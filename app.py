@@ -303,7 +303,7 @@ def addface():
 				image.save(os.path.join(app.root_path, imgName))
 
 				
-				# resize image
+				# #resize image
 				# image = cv2.imread(imgName, cv2.IMREAD_UNCHANGED)
 				# width = int(image.shape[1] * (20 / 100))
 				# height = int(image.shape[0] * (20 / 100))
